@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\World\TerminatorScript.cs">
+    <Files>
+      <File FileName="Assets\Cells\BasicCell\BasicCellProperty.cs" Line="39" Column="40" />
+      <File FileName="Assets\Cells\FeederCell\FeederCellProperty.cs" Line="7" Column="2" />
+      <File FileName="Assets\Cells\CellProperty_Global.cs" Line="28" Column="40" />
+      <File FileName="Assets\World\TerminatorScript.cs" Line="17" Column="92" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

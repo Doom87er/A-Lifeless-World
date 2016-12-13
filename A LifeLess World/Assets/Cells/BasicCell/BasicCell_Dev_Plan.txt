@@ -1,0 +1,6 @@
+currently not very good at moving energy from one basic cell to another in an equivilent exchange. should add a way to move energy from one cell to another without a net increase or loss of energy
+
+probably make a way for basicCell's to use energy to make more cell's
+-Basic cells should be the easiest to replicate
+
+add ways to turn basicCells into other types
