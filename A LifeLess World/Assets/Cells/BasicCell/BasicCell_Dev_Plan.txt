@@ -1,6 +1,23 @@
-currently not very good at moving energy from one basic cell to another in an equivilent exchange. should add a way to move energy from one cell to another without a net increase or loss of energy
-
-probably make a way for basicCell's to use energy to make more cell's
+Notes:
+-Main function should be moving energy
+-Secondary function should be general utility
 -Basic cells should be the easiest to replicate
 
-add ways to turn basicCells into other types
+Current Behavior:
+-reverses direction when hitting a feeder cell or another basic cell
+  (should change this so it will allways reverse its direction unless special conditions)
+
+-energy manipulation with other basic cells
+  this is kinda complex but I like how it works. here is a chart
+  (cell_1 energy = cell_2 energy) THEN (cell_1 +1 energy) (cell_2 +1 energy)
+  (cell_1 energy > cell_2 energy) THEN (cell_1 -1 energy) (cell_2 +1 energy)
+  (cell_1 energy < cell_2 energy) THEN (cell_1 +1 energy) (cell_2 -1 energy)
+
+-becomes feeder cell if 20 or more energy and interacts with basic cell
+
+
+Plans for Behavior:
+-become "energy producing" cell when 20 or more energy and interacts with feeder cell
+
+(Doom87er): the behavior script for this cell is a mess. I'll try to clean it up and i'll be sure to leave lots of notes.
+from now on this should be our referance for all other cells, so i'll be sure to leave as many notes on how to impliment changes/referances with respective files.
