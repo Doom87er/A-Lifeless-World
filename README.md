@@ -2,6 +2,10 @@
 
 A Game All about giving life to the empty void through complex patterns created from the interactions bettween "cells"
 
+this is the uncompilied code for a unity project (unity version 4.3.4f1)
+to open this in unity download the repository and then select the folder (should be called: "A-Life-Less-World") from: open project
+
+
 what we have so far:
  some extremly basic cells whose current behavior is mostly just an "idea" of how they should function
   -Basic Cell
@@ -23,18 +27,18 @@ what we have planned:
     -Parasite
       -A hostile cell that attaches to other cells and changes their functions
       -make feeder cells produce parasites instead of basic cells
-    
-    -Supplier Cell
-      -Makes producing energy easier
       
-    -Symbiote?
-      -the opposite of the parasite, does good things for your cells
+      -Supplier Cell
+       -Makes producing energy easier
       
-  an actuall reason to play
-    -not to sure what the "end goal" for the player should be
-      -"end goal" *needs* to have a clear path for the player to follow in order to keep consitent progress
-      -the player should be encourged to deviate from this path and get creative
-      -perhaps a puzzle like game with progressivly more chalenging senarios?
+     -Symbiote?
+       -the opposite of the parasite, does good things for your cells
+      
+an actuall reason to play
+  -not to sure what the "end goal" for the player should be
+    -"end goal" *needs* to have a clear path for the player to follow in order to keep consitent progres
+    -the player should be encourged to deviate from this path and get creative
+    -perhaps a puzzle like game with progressivly more chalenging senarios?
 
 TODO:
   -add folder for graphics
