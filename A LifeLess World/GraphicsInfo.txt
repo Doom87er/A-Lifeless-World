@@ -1,0 +1,16 @@
+
+Cells:
+  -All grapics i've made for cells so far have been 900 x 900 pixels
+
+  -the back ground is going to be very dark (probably) so all cells need to be perdominetly brightly collored
+  so they don't blend in with the (currently) mostly black back ground
+  -or at the very least contrast with black
+  
+  -it will do well to have some standards that corralate a cell's appearance with its function
+    Some conventions i've been trying to adhere too:
+    -cells that are upgraded forms of other cells share patterns or other elements with those cells (EX: the basic cell can become a feeder cell, so both have 1 center dot and 4 outer dots conected with lines)
+    -cells that produce more cells are primarly green
+    -cells that are "hostlie" have red ellements and web like patterns
+    -cells that have generic functions are grey
+    -cells that produce energy are primarly yellow
+    -cells that modify other cells have blue elements
