@@ -2,52 +2,54 @@
 using System.Collections;
 
 public class BasicCellProperty : MonoBehaviour {
-	/*dead code
-	public float speed = 0.0f;
-	public Vector3 cellStats.getVector() = new Vector3(0.0f,0.0f,0.0f);
-	public float energy = 0;
-	*/
+	
+	//all cell property scripts MUST have this, and have a prefab with their Global stats script assigned to this value
 	public CellProperty_Global cellStats;
+	
+	//this value deffines what this cell evovles into
+	//can be altered but never null
 	public GameObject nextGen;
 
+	//this value MUST be included in ALL cell property scripts
+	//when true, causes the cell to update it's self the next frame
 	private bool trigUpdate = true;
 
-	/*// if adding code here, test the upgarde to feedercell action in (OnCollisionEnter)
+	/*
+	//the start function should be disabled for all property scripts
+	// if adding code here, test the upgarde to feedercell action in (OnCollisionEnter)
 	void Start () {
 	
 	}
 	*/
 	
-	// Update is called once per frame
+	//keep the update function as sparse as possible, if it dosen't need to execute for EVERY frame
+	//then put it in the trigUpdate
 	void Update () {
 		
-
+		//this MUST be in every cell property script
+		//updates the cell's property's when ever it interacts with something
 		if (trigUpdate) {
-			this.GetComponent<Rigidbody> ().velocity = (cellStats.getVector () * cellStats.getSpeed());
-			cellStats.formToGrid ();
-			trigUpdate = false;
+			this.GetComponent<Rigidbody> ().velocity = (cellStats.getVector () * cellStats.getSpeed());//ensures that any acidental bumps don't move the cell of deffined course
+			cellStats.formToGrid ();//ensures that all cells line up perfectly with eachother
+			trigUpdate = false;//ensures that update trigger runs only once
 		}
 
-		/*
-		if (cellStats.getSpeed() != 0.0f) {//reduce overhead further?
-			this.transform.Translate (cellStats.getVector() * (cellStats.getSpeed() * Time.deltaTime));
-
-		}
-		*/
+		
 	}
 
+	//all cell's must have this function to define interaction
 	void OnCollisionEnter(Collision coll){
 
+		//all cell property scripts SHOULD do this, prevents cells from doing weird things
 		if (trigUpdate == true)//one interaction at a time
 			return;
 
+		//TODO: drop tags and add an integer ID to global stats so we can use a switch statment instead of if statments
 		if(coll.gameObject.tag == "BasicCell"){
-			//GameObject cellOther = coll.gameObject;
 			
-			//BasicCellProperty cellOtherProperty = coll.gameObject.GetComponent<BasicCellProperty> ();
 			CellProperty_Global otherStats = coll.gameObject.GetComponent<CellProperty_Global>();
 
-			cellStats.setVector(cellStats.getVector() * -1);
+			cellStats.setVector(cellStats.getVector() * -1);//should make this a default interaction
 
 			if (cellStats.getEnergy() <= otherStats.getEnergy()) {//if other cell has more energy increase own energy
 				cellStats.alterEnergy(1);
@@ -68,7 +70,7 @@ public class BasicCellProperty : MonoBehaviour {
 			cellStats.setVector(cellStats.getVector() * -1);
 		}
 
-		trigUpdate = true;
+		trigUpdate = true;//scheduals this cell to update itself next frame
 	}
 	
 
