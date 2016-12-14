@@ -1,17 +1,8 @@
+This cell should be focused on trivializing engery production and/or simplifing the process of producing more cells
+
+since this cell will be very important in early stages for making resorces to work with, this cell should be hard to kill or move by accident
+
+
+
 Notes:
--this cell should be easy to make and manipulate
--since this cell will be very important in early stages for making resorces to work with, this cell should be hard to kill or move by accident
--this cell's main function should be producing simple cell's
--this cell's function should be trivialized by more advanced cells (don't want the player to get annoyed by constantly building the same structure)
-
-current behavior:
--will allways take 1 energy away from basic cell's if able
-
--produces a basic cell moving in a random direction directly abouve it's self once it has 10 energy
-
-plans for behavior:
--when making a basic cell, the produced cell should move in a straight line away from the parent cell on the samw plane
- (should also check for obstruction)
-
-
-(Doom87er):the texture i made for this has a really bad contrast, but I think it would work better if it was animated
+the texture i made for this has a really bad contrast, but I think it would work if it was animated
